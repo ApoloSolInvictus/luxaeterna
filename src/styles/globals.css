@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --solar-gold: #d6b25e;
+  --deep-space: #0d0f14;
+  --ivory-light: #f8f6f2;
+  --aura-blue: #afcbff;
+  --rose-empathy: #e6c7c2;
+  --harmony-green: #8fb996;
+  --font-inter: Inter;
+  --font-manrope: Manrope;
+  --font-cormorant: "Cormorant Garamond";
+  --font-cinzel: Cinzel;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--deep-space);
+  color: var(--ivory-light);
+  font-family: Inter, Manrope, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(214, 178, 94, 0.35);
+  color: white;
+}
+
+.temple-grid {
+  background-image:
+    linear-gradient(rgba(248, 246, 242, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(248, 246, 242, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.marble-vein {
+  background:
+    linear-gradient(115deg, transparent 0 22%, rgba(214, 178, 94, 0.16) 23%, transparent 25% 100%),
+    linear-gradient(35deg, transparent 0 52%, rgba(175, 203, 255, 0.11) 53%, transparent 55% 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
